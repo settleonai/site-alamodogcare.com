@@ -1,49 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alamo Dog Care - Loving Cage-Free Pet Care in Alamo, CA</title>
-    <meta name="description" content="Professional cage-free dog boarding, daycare, and walking in Alamo. 7+ years experience, 500+ happy pets. Book your free consultation today!">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
-        .hero { background: linear-gradient(135deg, rgba(15,23,42,0.93), rgba(30,48,80,0.88)), url('https://images.unsplash.com/photo-1544568100-847a948585b9?w=1600&q=80') center/cover; color: white; padding: 60px 20px 100px; text-align: center; }
-        .logo { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; } .logo span { color: #f9a825; }
-        .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 20px; }
-        .hero h1 { font-size: 2.6rem; margin-bottom: 14px; font-weight: 800; } .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 560px; margin: 0 auto 28px; }
-        .cta-btn { display: inline-block; background: #f9a825; color: #1a1a1a; padding: 15px 36px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.05rem; } .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,168,37,0.4); }
-        .phone-link { display: block; margin-top: 14px; color: white; font-size: 1rem; text-decoration: none; opacity: 0.85; }
-        .stats { display: flex; justify-content: center; gap: 40px; margin-top: 32px; } .stat { text-align: center; } .stat .num { font-size: 1.8rem; font-weight: 800; color: #f9a825; } .stat .label { font-size: 0.8rem; opacity: 0.8; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 960px; margin: -50px auto 50px; padding: 0 20px; }
-        .service-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.1); } .service-card img { width: 100%; height: 180px; object-fit: cover; } .service-card .content { padding: 20px; } .service-card h3 { font-size: 1.15rem; margin-bottom: 6px; color: #1e3050; } .service-card p { color: #666; font-size: 0.9rem; } .service-card .price { color: #f9a825; font-weight: 700; margin-top: 8px; }
-        .about { padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; } .about h2 { font-size: 2rem; color: #1e3050; margin-bottom: 16px; } .about p { color: #555; font-size: 1.05rem; margin-bottom: 12px; }
-        .trust { background: #f8fafc; padding: 50px 20px; text-align: center; } .trust h2 { font-size: 1.8rem; color: #1e3050; margin-bottom: 24px; } .trust-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; max-width: 800px; margin: 0 auto; } .trust-item { text-align: center; flex: 1; min-width: 150px; } .trust-item .icon { font-size: 2rem; margin-bottom: 8px; } .trust-item h4 { font-size: 0.95rem; color: #1e3050; } .trust-item p { font-size: 0.85rem; color: #666; }
-        .reviews { padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: center; } .reviews h2 { font-size: 1.8rem; color: #1e3050; margin-bottom: 24px; } .review-card { background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 16px; text-align: left; } .review-card .stars { color: #f9a825; margin-bottom: 8px; } .review-card .text { color: #444; font-style: italic; margin-bottom: 8px; } .review-card .author { color: #888; font-size: 0.85rem; font-weight: 600; }
-        .cta-section { background: linear-gradient(135deg, #1e3050, #2d4a7a); color: white; padding: 60px 20px; text-align: center; } .cta-section h2 { font-size: 2rem; margin-bottom: 12px; } .cta-section p { opacity: 0.9; margin-bottom: 24px; font-size: 1.05rem; }
-        footer { background: #0f172a; color: #94a3b8; padding: 30px 20px; text-align: center; font-size: 0.85rem; } footer a { color: #f9a825; text-decoration: none; }
-        @media (max-width: 640px) { .hero h1 { font-size: 1.8rem; } .stats { gap: 20px; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alamo Dog Care - Cage-Free Boarding &amp; Daycare in Alamo, CA</title>
+<meta name="description" content="Cage-free dog boarding, daycare, and pet sitting in Alamo, CA. Premium home-based care near Iron Horse Trail. Call (925) 771-0435.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --sage: #7FA68E;
+  --sage-light: #c8dcd0;
+  --sage-dark: #5d8069;
+  --navy: #1B2A41;
+  --navy-light: #2a3f5f;
+  --gold: #FFC107;
+  --lavender: #B8C1EC;
+  --brown: #8B7355;
+  --white: #FFFFFF;
+  --cream: #F7FAF8;
+  --text-dark: #2c2c2c;
+  --text-muted: #6b6b6b;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.25;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ── NAV ── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(27,42,65,0.92);
+  backdrop-filter: blur(12px);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem; font-weight: 600; color: var(--white);
+  letter-spacing: 0.02em;
+}
+.nav-brand span { color: var(--sage); }
+.nav-links { display: flex; gap: 1.8rem; align-items: center; }
+.nav-links a {
+  color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 400;
+  letter-spacing: 0.03em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sage); }
+.nav-cta {
+  background: var(--sage); color: var(--white) !important;
+  padding: 0.5rem 1.2rem; border-radius: 6px;
+  font-weight: 700 !important; font-size: 0.85rem !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(127,166,142,0.4); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-toggle svg { width: 26px; height: 26px; stroke: var(--white); stroke-width: 2; fill: none; }
+
+/* ── HERO ── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  background: linear-gradient(200deg, rgba(27,42,65,0.72) 0%, rgba(93,128,105,0.5) 55%, rgba(139,115,85,0.4) 100%),
+    url('https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1600&q=80') center/cover no-repeat;
+  padding: 7rem 2rem 4rem;
+}
+.hero-inner { max-width: 740px; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(127,166,142,0.2); border: 1px solid rgba(127,166,142,0.45);
+  color: var(--sage-light); font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.4rem 1rem; border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  color: var(--white); font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.hero h1 em { font-style: italic; color: var(--sage-light); }
+.hero p {
+  color: rgba(255,255,255,0.88); font-size: 1.15rem;
+  max-width: 580px; margin: 0 auto 2.2rem; line-height: 1.8;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--sage); color: var(--white);
+  padding: 0.9rem 2rem; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(127,166,142,0.35); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--white);
+  padding: 0.9rem 2rem; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  border: 2px solid rgba(255,255,255,0.35);
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+.btn-secondary:hover { border-color: var(--sage); background: rgba(127,166,142,0.12); }
+
+.hero-stats {
+  display: flex; gap: 2.5rem; justify-content: center; margin-top: 3.5rem;
+  padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15);
+}
+.hero-stat strong {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; color: var(--sage-light); font-weight: 600;
+}
+.hero-stat span { color: rgba(255,255,255,0.65); font-size: 0.85rem; letter-spacing: 0.04em; }
+
+/* ── ABOUT (centered, single column — different from Moraga) ── */
+.about { padding: 6rem 2rem; background: var(--white); }
+.about-inner { max-width: 740px; margin: 0 auto; text-align: center; }
+.about-portrait {
+  width: 130px; height: 130px; border-radius: 50%;
+  margin: 0 auto 1.8rem;
+  overflow: hidden;
+  border: 4px solid var(--sage-light);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+.about-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.about .section-label { text-align: center; }
+.about h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 1.2rem; }
+.about p { color: var(--text-muted); font-size: 1.02rem; margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.about p strong { color: var(--text-dark); }
+
+.trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  margin-top: 2.2rem;
+}
+.trust-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--cream); border: 1px solid rgba(127,166,142,0.25);
+  padding: 0.6rem 1.2rem; border-radius: 30px;
+  font-size: 0.85rem; font-weight: 700; color: var(--navy);
+}
+.trust-pill svg { width: 16px; height: 16px; stroke: var(--sage); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+/* ── SERVICES (horizontal scroll on mobile) ── */
+.services { padding: 6rem 2rem; background: var(--cream); }
+.section-header { text-align: center; max-width: 620px; margin: 0 auto 3.5rem; }
+.section-label {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.8rem;
+}
+.section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy); margin-bottom: 1rem; }
+.section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem; max-width: 1060px; margin: 0 auto;
+}
+.service-card {
+  background: var(--white); border-radius: 14px;
+  padding: 2.2rem 1.8rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative; overflow: hidden;
+}
+.service-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px; background: linear-gradient(90deg, var(--sage), var(--sage-light));
+  transform: scaleX(0); transition: transform 0.3s; transform-origin: right;
+}
+.service-card:hover::after { transform: scaleX(1); transform-origin: left; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.service-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--sage-light); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.2rem; color: var(--sage-dark);
+}
+.service-card h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 0.5rem; }
+.service-card .price {
+  font-size: 0.85rem; font-weight: 700; color: var(--sage-dark);
+  letter-spacing: 0.03em; margin-bottom: 0.8rem;
+}
+.service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
+/* ── LOCAL / LIFESTYLE ── */
+.lifestyle {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+.lifestyle-inner {
+  max-width: 960px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center;
+}
+.lifestyle-img { border-radius: 16px; overflow: hidden; }
+.lifestyle-img img { width: 100%; height: 360px; object-fit: cover; }
+.lifestyle-text .section-label { color: var(--sage-light); text-align: left; }
+.lifestyle-text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--white); margin-bottom: 1rem;
+}
+.lifestyle-text p {
+  color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem;
+}
+.lifestyle-text .btn-primary { margin-top: 0.5rem; }
+
+/* ── REVIEWS ── */
+.reviews { padding: 6rem 2rem; background: var(--cream); }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem; max-width: 900px; margin: 0 auto;
+}
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px; padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+.review-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+.review-card blockquote {
+  color: var(--text-dark); font-size: 1rem;
+  line-height: 1.75; margin-bottom: 1.4rem;
+  font-style: italic;
+}
+.review-author { display: flex; align-items: center; gap: 0.8rem; }
+.review-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--sage); display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; color: var(--white);
+}
+.review-author-info strong { color: var(--navy); font-size: 0.9rem; display: block; }
+.review-author-info span { color: var(--text-muted); font-size: 0.8rem; }
+
+/* ── CTA ── */
+.cta {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, var(--sage-light), var(--cream));
+  text-align: center;
+}
+.cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy); margin-bottom: 1rem; }
+.cta p { color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem; font-size: 1.05rem; }
+.cta-phone {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem); color: var(--navy); font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.cta-phone svg { width: 28px; height: 28px; stroke: var(--sage); fill: none; stroke-width: 2; }
+.cta .btn-primary { font-size: 1.05rem; padding: 1rem 2.4rem; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy); padding: 3rem 2rem 2rem;
+  text-align: center; color: rgba(255,255,255,0.5);
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem;
+  color: var(--white); margin-bottom: 0.5rem;
+}
+.footer-brand span { color: var(--sage); }
+.footer p { font-size: 0.85rem; margin-bottom: 0.3rem; }
+.footer-bottom {
+  margin-top: 1.5rem; padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.78rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(27,42,65,0.97); padding: 1.5rem 2rem;
+    gap: 1.2rem;
+  }
+  .nav-toggle { display: block; }
+  .hero { min-height: 90vh; padding: 6rem 1.5rem 3rem; }
+  .hero-stats { flex-direction: column; gap: 1rem; }
+  .lifestyle-inner { grid-template-columns: 1fr; }
+  .lifestyle-img { order: -1; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .trust-row { flex-direction: column; align-items: center; }
+}
+</style>
 </head>
 <body>
-    <div class="hero">
-        <div class="logo">Alamo Dog <span>Care</span></div>
-        <div class="hero-badge">Trusted by Alamo Families Since 2019 - Cage-Free & Insured</div>
-        <h1>Alamo's Most Trusted Dog Care</h1>
-        <p>Loving, cage-free pet care right in your neighborhood. Where every dog is treated like family with personalized attention and endless belly rubs.</p>
-        <a href="tel:9257710435" class="cta-btn">Book Now</a>
-        <a href="tel:9257710435" class="phone-link">Or call us: (925) 771-0435</a>
-        <div class="stats"><div class="stat"><div class="num">7+</div><div class="label">Years of Love</div></div><div class="stat"><div class="num">500+</div><div class="label">Happy Pets</div></div><div class="stat"><div class="num">24/7</div><div class="label">Care Available</div></div></div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="#" class="nav-brand">Alamo<span>DogCare</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About Sunny</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="tel:9257710435" class="nav-cta">Call (925) 771-0435</a>
+  </div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Alamo's Trusted Pet Care</div>
+    <h1>Where Alamo Dogs Come to <em>Run, Rest &amp; Thrive</em></h1>
+    <p>A cage-free home for your pet that matches the open, outdoor spirit of Alamo. Personal care from someone who treats every dog like her own, just minutes from Iron Horse Trail.</p>
+    <div class="hero-actions">
+      <a href="tel:9257710435" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (925) 771-0435
+      </a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
     </div>
-    <div class="services">
-        <div class="service-card"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Dog Boarding"><div class="content"><h3>Dog Boarding</h3><p>Your dog's home away from home. Cage-free environment with 24/7 love, daily photos, and personalized attention.</p><div class="price">From $65/night</div></div></div>
-        <div class="service-card"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80" alt="Doggy Daycare"><div class="content"><h3>Doggy Daycare</h3><p>Fun-filled days with socialization, supervised play, and endless tail wags. Your pup will love it here.</p><div class="price">From $45/day</div></div></div>
-        <div class="service-card"><img src="https://images.unsplash.com/photo-1450778869180-e77e3f97efa1?w=600&q=80" alt="Dog Walking"><div class="content"><h3>Dog Walking</h3><p>Professional walks tailored to your dog's energy level. One-on-one attention, GPS tracking, post-walk report.</p><div class="price">From $25/walk</div></div></div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>7+</strong><span>Years Caring for Pets</span>
+      </div>
+      <div class="hero-stat">
+        <strong>500+</strong><span>Happy Dogs &amp; Cats</span>
+      </div>
+      <div class="hero-stat">
+        <strong>0</strong><span>Cages. Ever.</span>
+      </div>
     </div>
-    <div class="about"><h2>Meet Sunny</h2><p>Hi, I'm Sanaz (Sunny), the heart behind Alamo Dog Care. As a lifelong pet lover and Alamo resident, I understand that your pets are family members who deserve the best care possible.</p><p>With over 7 years of experience and 500+ happy pets, I provide a safe, loving, and completely cage-free environment where your fur babies can play, relax, and feel right at home.</p></div>
-    <div class="trust"><h2>Why Alamo Pet Parents Choose Us</h2><div class="trust-grid"><div class="trust-item"><div class="icon">&#127968;</div><h4>Cage-Free</h4><p>Your pets roam freely, just like at home</p></div><div class="trust-item"><div class="icon">&#128247;</div><h4>Daily Updates</h4><p>Photos and videos throughout the day</p></div><div class="trust-item"><div class="icon">&#128737;</div><h4>Fully Insured</h4><p>Complete peace of mind, always</p></div><div class="trust-item"><div class="icon">&#10084;</div><h4>Personal Touch</h4><p>One-on-one care and endless love</p></div></div></div>
-    <div class="reviews"><h2>What Pet Parents Say</h2><div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="text">"Sunny is incredible with our golden retriever! The cage-free setup is exactly what we wanted. Bailey always comes home tired and happy."</div><div class="author">- Jennifer M., Alamo</div></div><div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="text">"We've tried several dog sitters in Alamo and nobody compares to Sunny. The daily photos and updates give us total peace of mind when we travel."</div><div class="author">- David and Sarah K., Alamo</div></div></div>
-    <div class="cta-section"><h2>Ready to Give Your Pet the Best Care?</h2><p>Book your free consultation today. Serving Alamo, Danville, Walnut Creek and surrounding areas.</p><a href="tel:9257710435" class="cta-btn">Call Now - (925) 771-0435</a></div>
-    <footer><p>&copy; 2026 Alamo Dog Care - Serving Alamo, Danville, Walnut Creek and surrounding areas - <a href="tel:9257710435">(925) 771-0435</a></p><p style="margin-top: 8px;">Member of Pet Sitters Associates - Fully Licensed & Insured</p></footer>
+  </div>
+</section>
+
+<!-- About (centered single-column — different from Moraga's 2-col) -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-portrait">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80" alt="Dogs playing outdoors" loading="lazy">
+    </div>
+    <div class="section-label">Meet Sunny</div>
+    <h2>A Lifelong Pet Lover, Right Here in Alamo</h2>
+    <p>I'm <strong>Sanaz "Sunny" Hemmati</strong>, and caring for animals isn't just what I do &mdash; it's who I am. For over seven years, I've welcomed dogs and cats into my home with the same warmth and attention I give my own pets.</p>
+    <p>Living near Alamo, I understand the outdoor lifestyle here. Spacious lots, open skies, and trails everywhere &mdash; your dog deserves care that matches that energy. My fully cage-free home gives pets room to play, explore, and settle in comfortably.</p>
+    <div class="trust-row">
+      <div class="trust-pill">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Fully Insured
+      </div>
+      <div class="trust-pill">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Pet Sitters Associates
+      </div>
+      <div class="trust-pill">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+        7+ Years Experience
+      </div>
+      <div class="trust-pill">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        100% Cage-Free
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-label">Our Services</div>
+    <h2>Premium Pet Care for Alamo Families</h2>
+    <p>From overnight stays to afternoon adventures on the trail, we've got your pet covered with personalized, cage-free care.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>Cage-Free Dog Boarding</h3>
+      <div class="price">Starting at $65 / night</div>
+      <p>Your dog sleeps where they're comfortable &mdash; on the couch, a dog bed, or right next to me. Full run of the house with around-the-clock supervision, not locked in a kennel.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      </div>
+      <h3>Doggy Daycare</h3>
+      <div class="price">Starting at $45 / day</div>
+      <p>Heading out for the day? Drop off your pup for structured play, socialization, and rest in a home setting. Perfect for busy Alamo families and work-from-home days when your dog needs more stimulation.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h3>Dog Walking &amp; Pet Visits</h3>
+      <div class="price">Walks from $25 &middot; Cat visits available</div>
+      <p>Enjoy a walk along the Iron Horse Trail or a loop through the Round Hill neighborhood. Cat parents &mdash; we do house visits too, keeping your feline happy and fed while you're away.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lifestyle / Local Section (unique to Alamo page) -->
+<section class="lifestyle">
+  <div class="lifestyle-inner">
+    <div class="lifestyle-img">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&q=80" alt="Dog on a nature trail" loading="lazy">
+    </div>
+    <div class="lifestyle-text">
+      <div class="section-label">Made for Alamo</div>
+      <h2>Pet Care That Fits the Alamo Lifestyle</h2>
+      <p>Alamo is a place where dogs have room to roam, where mornings start with a walk past the Las Trampas hills, and where neighbors know each other by name. That's the same spirit we bring to every pet in our care.</p>
+      <p>Whether you're a Round Hill family with a high-energy retriever or you live off the Iron Horse Trail with a mellow senior dog, we tailor our care to your pet's personality and your family's routine.</p>
+      <a href="tel:9257710435" class="btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-label">What Neighbors Say</div>
+    <h2>Loved by Alamo Pet Parents</h2>
+    <p>Real words from real families right here in our community.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"We live near the Iron Horse Trail and used to board our border collie, Luna, at a big kennel in Walnut Creek. She'd come home stressed every time. With Sunny, she comes home calm and happy. You can tell Luna felt at home the entire time &mdash; the photos Sunny sends are proof."</blockquote>
+      <div class="review-author">
+        <div class="review-avatar">KW</div>
+        <div class="review-author-info">
+          <strong>Karen W.</strong>
+          <span>Alamo, CA</span>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"We have a large property near Round Hill and our two labs are used to space. Finding cage-free care that actually means cage-free was tough until we found Sunny. She gives them the freedom and attention they need. Honestly, they get excited when they see her car pull up."</blockquote>
+      <div class="review-author">
+        <div class="review-avatar">DL</div>
+        <div class="review-author-info">
+          <strong>David L.</strong>
+          <span>Alamo, CA (Round Hill)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Your Pet Deserves Alamo's Best</h2>
+  <p>Give your dog or cat the personal, cage-free care they deserve. One call is all it takes.</p>
+  <div class="cta-phone">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    <a href="tel:9257710435">(925) 771-0435</a>
+  </div>
+  <a href="tel:9257710435" class="btn-primary">Call Sunny Today</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-brand">Alamo<span>DogCare</span></div>
+  <p>Cage-free boarding &amp; daycare in Alamo, CA</p>
+  <p>Serving Alamo, Danville, San Ramon &amp; surrounding areas</p>
+  <div class="footer-bottom">
+    &copy; 2026 Alamo Dog Care. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>
